@@ -65,6 +65,16 @@ namespace FirstPractice
             //GuessingGame();
             MakeForLoop();
             Console.WriteLine("power is " + Convert.ToString(GetPower(2, 3)));
+            simpleProgram();
+
+
+            /// Class/Objects.
+            Book book1 = new Book();
+            book1.name = "GOT";
+            book1.title = "Games of Throne";
+            book1.author = "GRRM";
+            Book book2 = new Book("HP", "Harry Potter", "JKR");
+            book1.PrintBook();
            
 
 
@@ -136,6 +146,43 @@ namespace FirstPractice
                 result = result* baseNum;
             }
             return result;
+        }
+
+        // 2d arrays
+        static void make2D()
+        {
+            //Declaration
+            int[] nums1 = { 1, 2 };
+            int[] nums2 = { 3, 4 };
+            int[] nums3 = { 5, 6 };
+            int[,] numberTable = new int[2, 3];
+
+        }
+
+        // Exp handlings
+        static void simpleProgram()
+        {
+            try
+            {
+                Console.WriteLine("Enter a number: ");
+                int num1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter another: ");
+                int num2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine(num1 / num2);
+
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            //Specific exception
+
+            finally
+            {
+                // All codes here will be excuted no matter what.
+            }
+            
         }
     }
 }
