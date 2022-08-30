@@ -73,9 +73,14 @@ namespace FirstPractice
             book1.name = "GOT";
             book1.title = "Games of Throne";
             book1.author = "GRRM";
-            Book book2 = new Book("HP", "Harry Potter", "JKR");
+            Book book2 = new Book("HP", "JKR", "Harry Potter");
             book1.PrintBook();
-           
+            book2.PrintBook();
+            // Call static attribute Class.attribute
+            Console.WriteLine(Book.bookCount); // Book.bookCount called the static attribute.
+
+            /* Static attribute is an attribute that the CLASS owns, not the OBJECT.
+               Normal attribute is attribute that differs from OBJECT to OBJECT     */
 
 
             
